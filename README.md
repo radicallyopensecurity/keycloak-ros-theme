@@ -60,6 +60,19 @@ Then we have import the `realm` into `Keycloak`, while keeping `OpenLDAP` runnin
 make import
 ```
 
+Create a `.env`, pointing to your `keycloak-app-passwords` installation.
+
+```sh
+cp .env.sample .env
+```
+
+For example
+
+```sh
+KC_ROS_APP_PASSWORDS_EXTENSION_PATH=/home/user/git/keycloak-app-passwords/extension/target/keycloak-app-passwords-DEV.jar
+KC_ROS_APP_PASSWORDS_THEME_PATH=/home/user/git/keycloak-app-passwords/theme/dist_keycloak/keycloak-theme-for-kc-all-other-versions.jar
+```
+
 Now we can run the development build.
 
 ```sh
