@@ -1,0 +1,83 @@
+:root {
+  /* Palette */
+  --ros-color-neutral-white: #ffffff;
+  --ros-color-neutral-50: #f8f8f8;
+  --ros-color-neutral-100: #e6e6e6;
+  --ros-color-neutral-200: #cccccc;
+  --ros-color-neutral-300: #b3b3b3;
+  --ros-color-neutral-400: #999999;
+  --ros-color-neutral-500: #7f7f7f;
+  --ros-color-neutral-600: #666666;
+  --ros-color-neutral-700: #4d4d4d;
+  --ros-color-neutral-800: #333333;
+  --ros-color-neutral-900: #242424;
+  --ros-color-neutral-950: #121212;
+  --ros-color-neutral-black: #000000;
+
+  --ros-color-orange-50: #fff3df;
+  --ros-color-orange-100: #ffe29a;
+  --ros-color-orange-200: #ffc467;
+  --ros-color-orange-300: #ff9f3e;
+  --ros-color-orange-400: #ff7a26;
+  --ros-color-orange-500: #ff6320;
+  --ros-color-orange-600: #d4551f;
+  --ros-color-orange-700: #a3401b;
+  --ros-color-orange-800: #793016;
+  --ros-color-orange-900: #692a15;
+  --ros-color-orange-950: #4f2114;
+
+  --ros-color-primary-50: var(--ros-color-orange-50);
+  --ros-color-primary-100: var(--ros-color-orange-100);
+  --ros-color-primary-200: var(--ros-color-orange-200);
+  --ros-color-primary-300: var(--ros-color-orange-300);
+  --ros-color-primary-400: var(--ros-color-orange-400);
+  --ros-color-primary-500: var(--ros-color-orange-500);
+  --ros-color-primary-600: var(--ros-color-orange-600);
+  --ros-color-primary-700: var(--ros-color-orange-700);
+  --ros-color-primary-800: var(--ros-color-orange-800);
+  --ros-color-primary-900: var(--ros-color-orange-900);
+  --ros-color-primary-950: var(--ros-color-orange-950);
+
+  --ros-color-yellow-50: #fffff0;
+  --ros-color-yellow-100: #fefcc7;
+  --ros-color-yellow-200: #fef79a;
+  --ros-color-yellow-300: #fef066;
+  --ros-color-yellow-400: #ffeb3b;
+  --ros-color-yellow-500: #ffe600;
+  --ros-color-yellow-600: #e6d400;
+  --ros-color-yellow-700: #ccc000;
+  --ros-color-yellow-800: #b3aa00;
+  --ros-color-yellow-900: #999400;
+  --ros-color-yellow-950: #666100;
+
+  /* Fonts */
+  --ros-font-sans: 'Source Sans Pro', sans-serif;
+  --ros-font-serif: 'Source Serif Pro', serif;
+  --ros-font-mono: 'Source Code Pro', monospace;
+
+  /* Brand */
+  --ros-color-brand: var(--ros-color-orange-500);
+
+  /* Fallback theme: Light */
+
+  /* Common */
+  --ros-background-page: var(--ros-color-neutral-white);
+  --ros-color-text: var(--ros-color-neutral-950);
+  --ros-font-text: var(--ros-font-sans);
+
+  /* Component */
+  --ros-heading-level1-color: var(--ros-color-brand);
+  --ros-heading-level1-font: var(--ros-font-serif);
+  --ros-heading-level2-color: var(--ros-color-orange-600);
+  --ros-heading-level2-font: var(--ros-font-sans);
+
+  @media (prefers-color-scheme: dark) {
+    /* Common */
+    --ros-background-page: var(--ros-color-neutral-900);
+    --ros-color-text: var(--ros-color-neutral-white);
+
+    /* Component */
+    --ros-heading-level1-color: var(--ros-color-orange-600);
+    --ros-heading-level2-color: var(--ros-color-neutral-white);
+  }
+}

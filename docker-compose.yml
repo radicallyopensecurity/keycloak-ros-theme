@@ -1,0 +1,55 @@
+# WARNING: DO NOT USE THIS IN PRODUCTION
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.4
+    restart: always
+    command: 'start'
+    ports:
+      - 8080:8080
+    environment:
+      - KC_DB=dev-file
+      # disable caching so when reloading the browser new asset files will be loaded
+      - KC_SPI_THEME_STATIC_MAX_AGE=-1
+      - KC_SPI_THEME_CACHE_THEMES=false
+      - KC_SPI_THEME_CACHE_TEMPLATES=false
+      # welcome theme must be configured as env or cli arg
+      - KC_SPI_THEME_WELCOME_THEME=ros
+      # other
+      - KC_HTTP_ENABLED=true
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+      - KC_LOG_LEVEL=info
+      - KC_HOSTNAME_STRICT=false
+      - KC_HOSTNAME_STRICT_HTTPS=false
+    volumes:
+      - ./dist/ros:/opt/keycloak/themes/ros
+      - ${KC_ROS_APP_PASSWORDS_EXTENSION_PATH}:/opt/keycloak/providers/keycloak-app-passwords-DEV.jar
+      - ${KC_ROS_APP_PASSWORDS_THEME_PATH}:/opt/keycloak/providers/keycloak-app-passwords-theme.jar
+      - ./.internal/data:/opt/keycloak/data
+      - ./.internal/realms:/opt/keycloak/data/import
+    networks:
+      - default
+
+  openldap:
+    image: bitnami/openldap:2.6.9
+    container_name: openldap
+    ports:
+      - '1389:1389'
+      - '1636:1636'
+    environment:
+      - LDAP_ADMIN_USERNAME=admin
+      - LDAP_ADMIN_PASSWORD=admin
+      - LDAP_ROOT=dc=example,dc=org
+      - LDAP_ADMIN_DN=cn=admin,dc=example,dc=org
+    volumes:
+      - openldap:/bitnami/openldap
+      - ./.internal/ldap:/tmp/ldapscripts
+    networks:
+      - default
+
+volumes:
+  openldap:
+    driver: local
+
+networks:
+  default:

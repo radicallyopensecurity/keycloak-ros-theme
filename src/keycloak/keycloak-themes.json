@@ -1,0 +1,8 @@
+{
+  "themes": [
+    {
+      "name": "ros",
+      "types": ["account", "admin", "login"]
+    }
+  ]
+}
