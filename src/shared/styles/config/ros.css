@@ -80,4 +80,6 @@
     --ros-heading-level1-color: var(--ros-color-orange-600);
     --ros-heading-level2-color: var(--ros-color-neutral-white);
   }
+
+  --keycloak-card-top-color: var(--ros-color-orange-600);
 }
