@@ -1,66 +1,48 @@
 :root {
-  --pf-v5-global--primary-color--100: var(--ros-color-primary-500) !important;
-  --pf-v5-global--primary-color--200: var(--ros-color-primary-600) !important;
-  --pf-v5-global--primary-color--light-100: var(
-    --ros-color-primary-500
-  ) !important;
-  --pf-v5-global--primary-color--dark-100: var(
-    --ros-color-primary-500
-  ) !important;
-  --pf-v5-global--secondary-color--100: var(--ros-color-primary-200) !important;
+  --pf-v5-global--primary-color--100: var(--ros-color-primary-500);
+  --pf-v5-global--primary-color--200: var(--ros-color-primary-600);
+  --pf-v5-global--primary-color--light-100: var(--ros-color-primary-500);
+  --pf-v5-global--primary-color--dark-100: var(--ros-color-primary-500);
+  --pf-v5-global--secondary-color--100: var(--ros-color-primary-200);
 
   /* Page */
-  --ros-common-page-background: var(--ros-color-neutral-800) !important;
+  --ros-common-page-background: var(--ros-color-neutral-800);
 
   /* Links */
-  --pf-v5-global--link--Color: var(--ros-color-primary-600) !important;
-  --pf-v5-global--link--Color--hover: var(--ros-color-primary-700) !important;
-  --pf-v5-global--link--Color--visited: var(--ros-color-primary-500) !important;
+  --pf-v5-global--link--Color: var(--ros-color-primary-600);
+  --pf-v5-global--link--Color--hover: var(--ros-color-primary-700);
+  --pf-v5-global--link--Color--visited: var(--ros-color-primary-500);
   @media (prefers-color-scheme: dark) {
-    --pf-v5-global--link--Color: var(--ros-color-primary-400) !important;
-    --pf-v5-global--link--Color--hover: var(--ros-color-primary-300) !important;
-    --pf-v5-global--link--Color--visited: var(
-      --ros-color-primary-400
-    ) !important;
+    --pf-v5-global--link--Color: var(--ros-color-primary-400);
+    --pf-v5-global--link--Color--hover: var(--ros-color-primary-300);
+    --pf-v5-global--link--Color--visited: var(--ros-color-primary-400);
   }
 
-  --pf-v5-global--link--Color--light: var(--ros-color-primary-600) !important;
-  --pf-v5-global--link--Color--light--hover: var(
-    --ros-color-primary-700
-  ) !important;
+  --pf-v5-global--link--Color--light: var(--ros-color-primary-600);
+  --pf-v5-global--link--Color--light--hover: var(--ros-color-primary-700);
   @media (prefers-color-scheme: dark) {
-    --pf-v5-global--link--Color--light: var(--ros-color-primary-400) !important;
-    --pf-v5-global--link--Color--light--hover: var(
-      --ros-color-primary-300
-    ) !important;
-    --pf-v5-global--link--Color--light--visited: var(
-      --ros-color-primary-400
-    ) !important;
+    --pf-v5-global--link--Color--light: var(--ros-color-primary-400);
+    --pf-v5-global--link--Color--light--hover: var(--ros-color-primary-300);
+    --pf-v5-global--link--Color--light--visited: var(--ros-color-primary-400);
   }
 
-  --pf-v5-global--link--Color--dark: var(--ros-color-primary-600) !important;
-  --pf-v5-global--link--Color--dark--hover: var(
-    --ros-color-primary-700
-  ) !important;
+  --pf-v5-global--link--Color--dark: var(--ros-color-primary-600);
+  --pf-v5-global--link--Color--dark--hover: var(--ros-color-primary-700);
   @media (prefers-color-scheme: dark) {
-    --pf-v5-global--link--Color--dark: var(--ros-color-primary-400) !important;
-    --pf-v5-global--link--Color--dark--hover: var(
-      --ros-color-primary-300
-    ) !important;
+    --pf-v5-global--link--Color--dark: var(--ros-color-primary-400);
+    --pf-v5-global--link--Color--dark--hover: var(--ros-color-primary-300);
   }
 
-  --pf-v5-global--active-color--100: var(--ros-color-primary-600) !important;
-  --pf-v5-global--active-color--200: var(--ros-color-primary-700) !important;
-  --pf-v5-global--active-color--300: var(--ros-color-primary-800) !important;
-  --pf-v5-global--active-color--400: var(--ros-color-primary-900) !important;
+  --pf-v5-global--active-color--100: var(--ros-color-primary-600);
+  --pf-v5-global--active-color--200: var(--ros-color-primary-700);
+  --pf-v5-global--active-color--300: var(--ros-color-primary-800);
+  --pf-v5-global--active-color--400: var(--ros-color-primary-900);
 
-  --pf-v5-c-tabs__scroll-button--hover--Color: var(
-    --ros-color-primary-700
-  ) !important;
+  --pf-v5-c-tabs__scroll-button--hover--Color: var(--ros-color-primary-700);
 
-  --pf-v5-global--warning-color--100: var(--ros-color-yellow-500) !important;
+  --pf-v5-global--warning-color--100: var(--ros-color-yellow-500);
   @media (prefers-color-scheme: dark) {
-    --pf-v5-global--warning-color--100: var(--ros-color-yellow-600) !important;
+    --pf-v5-global--warning-color--100: var(--ros-color-yellow-600);
   }
 }
 
@@ -68,35 +50,31 @@
 
 .pf-v5-c-tabs__item.pf-m-action::after,
 .pf-v5-c-tabs__link::after {
-  --pf-v5-c-tabs__link--after--BorderColor: var(
-    --ros-color-primary-500
-  ) !important;
+  --pf-v5-c-tabs__link--after--BorderColor: var(--ros-color-primary-500);
   @media (prefers-color-scheme: dark) {
-    --pf-v5-c-tabs__link--after--BorderColor: var(
-      --ros-color-primary-400
-    ) !important;
+    --pf-v5-c-tabs__link--after--BorderColor: var(--ros-color-primary-400);
   }
 }
 
 /* Button */
 
 .pf-v5-c-button:disabled {
-  color: var(--ros-color-neutral-white) !important;
+  color: var(--ros-color-neutral-white);
 }
 
 .pf-v5-c-menu-toggle.pf-m-primary,
 .pf-v5-c-button.pf-m-primary {
-  background-color: var(--ros-color-primary-600) !important;
+  background-color: var(--ros-color-primary-600);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-primary-600) !important;
+    background-color: var(--ros-color-primary-600);
   }
 }
 
 .pf-v5-c-menu-toggle.pf-m-primary:hover,
 .pf-v5-c-button.pf-m-primary:hover {
-  background-color: var(--ros-color-primary-700) !important;
+  background-color: var(--ros-color-primary-700);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-primary-500) !important;
+    background-color: var(--ros-color-primary-500);
   }
 }
 
@@ -104,27 +82,27 @@
 
 .pf-v5-c-masthead,
 .pf-v5-c-masthead__content > .pf-v5-c-toolbar {
-  background-color: var(--ros-color-neutral-800) !important;
+  background-color: var(--ros-color-neutral-800);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-neutral-800) !important;
+    background-color: var(--ros-color-neutral-800);
   }
 }
 
 img.keycloak__pageheader_brand,
 .pf-v5-c-masthead__brand > img {
-  height: 56px !important;
+  height: 56px;
 }
 
 /* Sidebar */
 .pf-v5-c-page__sidebar {
-  background: var(--ros-color-primary-600) !important;
+  background: var(--ros-color-primary-600);
   @media (prefers-color-scheme: dark) {
-    background: var(--ros-color-primary-600) !important;
+    background: var(--ros-color-primary-600);
   }
 }
 
 .pf-v5-c-page__sidebar-body h2 {
-  color: var(--ros-color-neutral-50) !important;
+  color: var(--ros-color-neutral-50);
 }
 
 .pf-v5-c-nav__link.pf-m-current,
@@ -134,46 +112,46 @@ img.keycloak__pageheader_brand,
 .pf-v5-c-nav__link:hover,
 .pf-v5-c-nav__link:focus,
 .pf-v5-c-nav__link:active {
-  background-color: var(--ros-color-primary-700) !important;
-  color: var(--ros-color-neutral-white) !important;
+  background-color: var(--ros-color-primary-700);
+  color: var(--ros-color-neutral-white);
 }
 
 .pf-v5-c-nav__item.pf-m-expandable:before,
 .pf-v5-c-nav__link:before,
 .pf-v5-c-nav__link:after {
-  border: none !important;
+  border: none;
 }
 
 .pf-v5-c-nav__link,
 .pf-v5-c-nav__list li {
-  color: var(--ros-color-neutral-white) !important;
+  color: var(--ros-color-neutral-white);
 }
 
 .pf-v5-c-nav__section-title {
-  border-color: var(--ros-color-primary-700) !important;
+  border-color: var(--ros-color-primary-700);
 }
 
 .pf-v5-c-nav .pf-v5-c-divider {
-  --pf-v5-c-divider--after--BackgroundColor: none !important;
+  --pf-v5-c-divider--after--BackgroundColor: none;
 }
 
 input[type='checkbox'] {
-  accent-color: var(--ros-color-primary-600) !important;
+  accent-color: var(--ros-color-primary-600);
   @media (prefers-color-scheme: dark) {
-    accent-color: var(--ros-color-primary-400) !important;
+    accent-color: var(--ros-color-primary-400);
   }
 }
 
 div.kc-logo-text {
-  width: 500px !important;
-  height: 121px !important;
+  width: 500px;
+  height: 121px;
 }
 
 /* Switch */
 
 .pf-v5-c-switch__input:checked ~ .pf-v5-c-switch__toggle {
-  background-color: var(--ros-color-primary-600) !important;
+  background-color: var(--ros-color-primary-600);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-primary-400) !important;
+    background-color: var(--ros-color-primary-400);
   }
 }

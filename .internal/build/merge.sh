@@ -18,7 +18,3 @@ find "$DIST_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r THEME_DIR; do
 
   cp "$SHARED_DIR/images/"* "$RESOURCE_DIR"
 done
-
-ACCOUNT_ASSETS_DIR="$DIST_DIR/account/resources/dist/assets/"
-mkdir -p "$ACCOUNT_ASSETS_DIR"
-cp "$SHARED_DIR/images/logo.svg" "$ACCOUNT_ASSETS_DIR/logo-DPt1APJL.svg"

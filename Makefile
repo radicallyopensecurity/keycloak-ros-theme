@@ -1,4 +1,4 @@
-.PHONY: all build clean copy merge pack import export dev
+.PHONY: all build clean copy merge package import export dev
 
 all: build
 build: clean copy merge
@@ -18,8 +18,8 @@ merge:
 watch:
 	./.internal/build/watch.sh
 
-pack:
-	./.internal/build/pack.sh
+package:
+	./.internal/build/package.sh
 
 import:
 	./.internal/keycloak/import.sh

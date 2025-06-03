@@ -2,7 +2,7 @@
 
 This repository contains the ROS theme for Keycloak.
 
-See [the wiki](https://git.radicallyopensecurity.com/ros-infra/keycloak-ros-theme/-/wikis/screenshots) for screenshots.
+See [the wiki](https://github.com/radicallyopensecurity/keycloak-ros-theme/wiki/Screenshots) for screenshots.
 
 ## Dependencies
 
@@ -28,7 +28,7 @@ If you want a `jar` file instead:
 
 ```sh
 make
-make pack
+make package
 ```
 
 Copy the `dist/ros.jar` file to `/opt/keycloak/providers`.
@@ -84,4 +84,4 @@ See the `.env.*` files for login credentials. It goes without saying, but don't 
 
 ## LICENSE
 
-MIT
+[MIT](./LICENSE.md)
