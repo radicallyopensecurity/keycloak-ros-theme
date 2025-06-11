@@ -2,9 +2,11 @@
 
 echo "Copying themes"
 
-mkdir -p ./dist/ros
-cp -r src/keycloak/* ./dist/ros
+THEME_NAME=keycloak-ros-theme
 
-mkdir -p dist/ros/account/resources/dist
-cp src/shared/images/favicon-32x32.png dist/ros/account/resources/dist/favicon-32x32.png
-cp src/shared/images/favicon.png dist/ros/account/resources/dist/favicon.png
+mkdir -p "./dist/keycloak-ros-theme"
+cp -r src/keycloak/* "./dist/keycloak-ros-theme"
+
+mkdir -p "dist/keycloak-ros-theme/account/resources/dist"
+cp src/shared/images/favicon-32x32.png "dist/keycloak-ros-theme/account/resources/dist/favicon-32x32.png"
+cp src/shared/images/favicon.png "dist/keycloak-ros-theme/account/resources/dist/favicon.png"
