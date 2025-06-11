@@ -1,7 +1,7 @@
 {
   "themes": [
     {
-      "name": "ros",
+      "name": "keycloak-ros-theme",
       "types": ["account", "admin", "login"]
     }
   ]

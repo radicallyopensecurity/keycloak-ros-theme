@@ -3,7 +3,7 @@
 SHARED_DIR="./src/shared"
 THEME="$SHARED_DIR/styles/theme.css"
 MERGE_SCRIPT="./.internal/build/merge-css.sh"
-DIST_DIR="./dist/ros"
+DIST_DIR="./dist/keycloak-ros-theme"
 FILE_NAME="ros.css"
 
 MERGED_CSS="$("$MERGE_SCRIPT" "$THEME")"

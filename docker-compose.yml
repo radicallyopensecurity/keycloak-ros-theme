@@ -1,11 +1,12 @@
 # WARNING: DO NOT USE THIS IN PRODUCTION
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:26.2.4
+    image: quay.io/keycloak/keycloak:26.2.5
     restart: always
     command: 'start'
     ports:
       - 8080:8080
+    env_file: .env
     environment:
       - KC_DB=dev-file
       # disable caching so when reloading the browser new asset files will be loaded
@@ -13,7 +14,7 @@ services:
       - KC_SPI_THEME_CACHE_THEMES=false
       - KC_SPI_THEME_CACHE_TEMPLATES=false
       # welcome theme must be configured as env or cli arg
-      - KC_SPI_THEME_WELCOME_THEME=ros
+      - KC_SPI_THEME_WELCOME_THEME=keycloak-ros-theme
       # other
       - KC_HTTP_ENABLED=true
       - KC_BOOTSTRAP_ADMIN_USERNAME=admin
@@ -22,7 +23,9 @@ services:
       - KC_HOSTNAME_STRICT=false
       - KC_HOSTNAME_STRICT_HTTPS=false
     volumes:
-      - ./dist/ros:/opt/keycloak/themes/ros
+      # either use the jar or the dist files
+      - ./dist/keycloak-ros-theme.jar:/opt/keycloak/providers/keycloak-ros-theme.jar
+      # - ./dist/keycloak-ros-theme:/opt/keycloak/themes/keycloak-ros-theme
       - ${KC_ROS_APP_PASSWORDS_EXTENSION_PATH}:/opt/keycloak/providers/keycloak-app-passwords-DEV.jar
       - ${KC_ROS_APP_PASSWORDS_THEME_PATH}:/opt/keycloak/providers/keycloak-app-passwords-theme.jar
       - ./.internal/data:/opt/keycloak/data

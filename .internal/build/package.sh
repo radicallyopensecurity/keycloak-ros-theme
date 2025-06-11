@@ -5,16 +5,17 @@ echo "Creating jar"
 TMPDIR=$(mktemp -d)
 trap 'rm -rf "$TMPDIR"' EXIT
 
-OUT_JAR="$(pwd)/dist/ros.jar"
+THEME_NAME=keycloak-ros-theme
+OUT_JAR="$(pwd)/dist/$THEME_NAME.jar"
 
 mkdir -p "$TMPDIR/META-INF"
-mkdir -p "$TMPDIR/themes"
+mkdir -p "$TMPDIR/theme"
 mkdir -p dist
 
-cp ./theme/keycloak-themes.json "$TMPDIR/META-INF/"
-cp -r dist/ros "$TMPDIR/themes/"
+cp ./dist/$THEME_NAME/keycloak-themes.json "$TMPDIR/META-INF/"
+cp -r dist/$THEME_NAME "$TMPDIR/theme/"
 
 (
   cd "$TMPDIR" || exit
-  zip -r "$OUT_JAR" META-INF themes
+  zip -r "$OUT_JAR" META-INF theme
 )

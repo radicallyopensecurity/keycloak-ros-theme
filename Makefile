@@ -1,6 +1,6 @@
 .PHONY: all build clean copy merge package import export dev
 
-all: build
+all: build package
 build: clean copy merge
 
 dev:
