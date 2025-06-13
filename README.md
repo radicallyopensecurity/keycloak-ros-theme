@@ -100,4 +100,4 @@ See the `.env.*` files for login credentials. It goes without saying, but don't 
 
 ## LICENSE
 
-[MIT](./LICENSE.md)
+[LGPL-3.0](./LICENSE.md)
