@@ -8,6 +8,15 @@
   /* Page */
   --ros-common-page-background: var(--ros-color-neutral-800);
 
+  /* Sidebar */
+
+  /* background: var(--ros-color-primary-600); */
+  --pf-v5-c-page__sidebar--BackgroundColor: var(--ros-color-primary-600);
+  @media (prefers-color-scheme: dark) {
+    /* background: var(--ros-color-primary-700); */
+    --pf-v5-c-page__sidebar--BackgroundColor: var(--ros-color-primary-700);
+  }
+
   /* Links */
   --pf-v5-global--link--Color: var(--ros-color-primary-600);
   --pf-v5-global--link--Color--hover: var(--ros-color-primary-700);
@@ -38,7 +47,11 @@
   --pf-v5-global--active-color--300: var(--ros-color-primary-800);
   --pf-v5-global--active-color--400: var(--ros-color-primary-900);
 
+  /* Tabs */
+
   --pf-v5-c-tabs__scroll-button--hover--Color: var(--ros-color-primary-700);
+
+  /* Alerts */
 
   --pf-v5-global--warning-color--100: var(--ros-color-yellow-500);
   @media (prefers-color-scheme: dark) {
@@ -66,7 +79,7 @@
 .pf-v5-c-button.pf-m-primary {
   background-color: var(--ros-color-primary-600);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-primary-600);
+    background-color: var(--ros-color-primary-700);
   }
 }
 
@@ -74,7 +87,8 @@
 .pf-v5-c-button.pf-m-primary:hover {
   background-color: var(--ros-color-primary-700);
   @media (prefers-color-scheme: dark) {
-    background-color: var(--ros-color-primary-500);
+    background-color: var(--ros-color-primary-600);
+    color: var(--ros-color-neutral-white);
   }
 }
 
@@ -94,13 +108,6 @@ img.keycloak__pageheader_brand,
 }
 
 /* Sidebar */
-.pf-v5-c-page__sidebar {
-  background: var(--ros-color-primary-600);
-  @media (prefers-color-scheme: dark) {
-    background: var(--ros-color-primary-600);
-  }
-}
-
 .pf-v5-c-page__sidebar-body h2 {
   color: var(--ros-color-neutral-50);
 }
@@ -114,6 +121,9 @@ img.keycloak__pageheader_brand,
 .pf-v5-c-nav__link:active {
   background-color: var(--ros-color-primary-700);
   color: var(--ros-color-neutral-white);
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--ros-color-primary-800);
+  }
 }
 
 .pf-v5-c-nav__item.pf-m-expandable:before,
@@ -129,11 +139,16 @@ img.keycloak__pageheader_brand,
 
 .pf-v5-c-nav__section-title {
   border-color: var(--ros-color-primary-700);
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--ros-color-primary-800);
+  }
 }
 
 .pf-v5-c-nav .pf-v5-c-divider {
   --pf-v5-c-divider--after--BackgroundColor: none;
 }
+
+/* Checkbox */
 
 input[type='checkbox'] {
   accent-color: var(--ros-color-primary-600);
@@ -141,6 +156,8 @@ input[type='checkbox'] {
     accent-color: var(--ros-color-primary-400);
   }
 }
+
+/* Logo */
 
 div.kc-logo-text {
   width: 500px;
