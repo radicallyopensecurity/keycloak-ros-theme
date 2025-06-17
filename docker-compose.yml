@@ -2,6 +2,7 @@
 services:
   keycloak:
     image: quay.io/keycloak/keycloak:26.2.5
+    container_name: keycloak
     restart: always
     command: 'start'
     ports:
@@ -24,8 +25,8 @@ services:
       - KC_HOSTNAME_STRICT_HTTPS=false
     volumes:
       # either use the jar or the dist files
-      - ./dist/keycloak-ros-theme.jar:/opt/keycloak/providers/keycloak-ros-theme.jar
-      # - ./dist/keycloak-ros-theme:/opt/keycloak/themes/keycloak-ros-theme
+      # - ./dist/keycloak-ros-theme.jar:/opt/keycloak/providers/keycloak-ros-theme.jar
+      - ./dist/keycloak-ros-theme:/opt/keycloak/themes/keycloak-ros-theme
       - ${KC_ROS_APP_PASSWORDS_EXTENSION_PATH}:/opt/keycloak/providers/keycloak-app-passwords-DEV.jar
       - ${KC_ROS_APP_PASSWORDS_THEME_PATH}:/opt/keycloak/providers/keycloak-app-passwords-theme.jar
       - ./.internal/data:/opt/keycloak/data
