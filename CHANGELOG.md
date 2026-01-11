@@ -1,3 +1,9 @@
+## 1.0.4 (2026-01-11)
+
+### Fix
+
+- **login**: add staff note to login
+
 ## 1.0.3 (2026-01-11)
 
 ### Fix
