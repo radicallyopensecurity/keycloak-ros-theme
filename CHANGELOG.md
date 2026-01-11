@@ -1,3 +1,9 @@
+## 1.0.3 (2026-01-11)
+
+### Fix
+
+- add lockout message in footer (#7)
+
 ## 1.0.2 (2025-06-17)
 
 ### Fix
